@@ -4,16 +4,34 @@ import com.example.demo.dto.LoginRequest;
 import com.example.demo.dto.LoginResponse;
 import com.example.demo.dto.SignUpRequest;
 import com.example.demo.dto.SignUpResponse;
+import com.example.demo.entity.User;
+import com.example.demo.mapper.UserMapper;
+import com.example.demo.repository.UsersRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class UserServiceImpl implements UserService{
+import java.util.Optional;
+
+public class UserServiceImpl implements UserService {
+
+    @Autowired
+    UsersRepository usersRepository;
+
+    @Autowired
+    UserMapper userMapper;
 
     @Override
     public LoginResponse login(LoginRequest request) {
-        return null;
+        User user = userMapper.toUser(request);
+        Optional<User> foundUser = usersRepository.findById(user.getEmail_id()).stream().findFirst();
+        if(foundUser.isPresent()){
+            return new LoginResponse(user.getEmail_id());
+        } else {
+            return new LoginResponse(null);
+        }
     }
 
     @Override
     public SignUpResponse signUp(SignUpRequest request) {
-        return null;
+           return null;
     }
 }
