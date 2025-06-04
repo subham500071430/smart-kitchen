@@ -1,15 +1,11 @@
-package com.example.demo;
+package com.example.demo.dto;
 
-public class UserDTO {
+public class UserLoginRequest {
 
     private String email_id;
-
     private String password;
 
-    public UserDTO() {
-    }
-
-    public UserDTO(String email_id, String password) {
+    public UserLoginRequest(String email_id, String password) {
         this.email_id = email_id;
         this.password = password;
     }

@@ -12,7 +12,7 @@ function Login({ onLogin }) {
             email_id : username,
             password : password
         };
-        const response = validateUser(jsonData);
+        const response = await validateUser(jsonData);
         console.log(response);
         onLogin(response); // Call the parent function to indicate the user is logged in
     };

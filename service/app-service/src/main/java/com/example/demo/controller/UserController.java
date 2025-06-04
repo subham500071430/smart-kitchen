@@ -1,5 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.entity.User;
+import com.example.demo.dto.UserLoginRequest;
+import com.example.demo.UserMapper;
+import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +21,7 @@ public class UserController {
     private UserMapper userMapper;
 
     @PostMapping(path = "/addUser")
-    public void addNewUser(@RequestBody UserDTO userDTO) {
+    public void addNewUser(@RequestBody UserLoginRequest userDTO) {
         User user = userMapper.mapToUser(userDTO);
         usersRepository.save(user);
     }
@@ -32,7 +36,7 @@ public class UserController {
 
     @PostMapping(path = "/validateUser")
     @ResponseBody
-    public boolean validateUser(@RequestBody UserDTO userDTO){
+    public boolean validateUser(@RequestBody UserLoginRequest userDTO){
 
         User user = userMapper.mapToUser(userDTO);
 

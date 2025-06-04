@@ -6,7 +6,7 @@ const registerUser = async (jsonData) => {
 
     try {
 
-        const response = axios.post(api, jsonData, {
+        const response = await axios.post(api, jsonData, {
             headers: {
                 'Content-Type': 'application/json'
             }
