@@ -1,59 +1,35 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.User;
-import com.example.demo.dto.UserLoginRequest;
-import com.example.demo.UserMapper;
-import com.example.demo.repository.UsersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.demo.dto.LoginRequest;
+import com.example.demo.dto.LoginResponse;
+import com.example.demo.dto.SignUpRequest;
+import com.example.demo.dto.SignUpResponse;
+import com.example.demo.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
 @RestController
-@RequestMapping("/api")
+@RequestMapping("")
 @CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
-    @Autowired
-    private UsersRepository usersRepository;
+    private final UserService userService;
 
-    @Autowired
-    private UserMapper userMapper;
-
-    @PostMapping(path = "/addUser")
-    public void addNewUser(@RequestBody UserLoginRequest loginRequest) {
-        User user = userMapper.mapToUser(loginRequest);
-        usersRepository.save(user);
+    UserController(UserService userService) {
+        this.userService = userService;
     }
 
-    @GetMapping(path = "/getAllUsers")
-    @ResponseBody
-    public Iterable<User> getAllUser() {
-        Iterable<User> users = usersRepository.findAll();
-
-        return users;
+    @PostMapping(path = "/login")
+    public LoginResponse login(@RequestBody LoginRequest loginRequest) {
+        return userService.login(loginRequest);
     }
 
-    @PostMapping(path = "/validateUser")
-    @ResponseBody
-    public boolean validateUser(@RequestBody UserLoginRequest userDTO){
-
-        User user = userMapper.mapToUser(userDTO);
-
-        Optional<User> optionalUser = usersRepository.findById(user.getEmail_id());
-
-         if(!optionalUser.isEmpty()){
-
-             if(optionalUser.get().getPassword().equals(user.getPassword())){
-                 return true;
-             }
-         }
-
-         return false;
+    @PostMapping(path = "/signup")
+    public SignUpResponse signup(@RequestBody SignUpRequest signUpRequest) {
+        return userService.signUp(signUpRequest);
     }
 
     @GetMapping(path = "/hello")
-    public String getHello(){
+    public String getHello() {
         return "Hello";
     }
 }
