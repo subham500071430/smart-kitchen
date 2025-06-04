@@ -1,20 +1,20 @@
 // Login.js
 import React, { useState } from 'react';
-import ValidateUser from '../../Service/userService';
+import validateUser from '../../Service/UserService';
 
 function Login({ onLogin }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const jsonData = {
             email_id : username,
             password : password
         };
-        ValidateUser(jsonData);
-        // Implement login logic here
-        onLogin(true); // Call the parent function to indicate the user is logged in
+        const response = await validateUser(jsonData);
+        console.log(response);
+        onLogin(response); // Call the parent function to indicate the user is logged in
     };
 
     return (

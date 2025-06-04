@@ -1,14 +1,21 @@
 // Signup.js
 import React, { useState } from 'react';
+import registerUser from '../../Service/SignupService';
 
 function Signup({ onSignup }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Implement signup logic here
-        onSignup(true); // Call the parent function to indicate the user is signed up
+        const jsonData = {
+            email_id: username,
+            password: password
+        };
+
+        const response = await registerUser(jsonData);
+        console.log(response);
+        onSignup(response); // Call the parent function to indicate the user is signed up
     };
 
     return (
