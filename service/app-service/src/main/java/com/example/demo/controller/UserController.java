@@ -21,8 +21,8 @@ public class UserController {
     private UserMapper userMapper;
 
     @PostMapping(path = "/addUser")
-    public void addNewUser(@RequestBody UserLoginRequest userDTO) {
-        User user = userMapper.mapToUser(userDTO);
+    public void addNewUser(@RequestBody UserLoginRequest loginRequest) {
+        User user = userMapper.mapToUser(loginRequest);
         usersRepository.save(user);
     }
 
