@@ -22,13 +22,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public LoginResponse login(LoginRequest request) {
         User user = userMapper.toUser(request);
-        Optional<User> foundUser = usersRepository.findById(user.getEmail_id()).stream().findFirst();
-        if(foundUser.isPresent()){
-            return new LoginResponse(user.getEmail_id());
+        Optional<User> foundUser = usersRepository.findById(user.getEmailId());
+
+        if (foundUser.isPresent()) {
+            return new LoginResponse(user.getEmailId());
         } else {
-            return new LoginResponse(null);
+            return new LoginResponse();
         }
     }
+
 
     @Override
     public SignUpResponse signUp(SignUpRequest request) {
