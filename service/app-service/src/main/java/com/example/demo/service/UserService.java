@@ -4,11 +4,10 @@ import com.example.demo.dto.LoginRequest;
 import com.example.demo.dto.LoginResponse;
 import com.example.demo.dto.SignUpRequest;
 import com.example.demo.dto.SignUpResponse;
-import org.springframework.http.ResponseEntity;
 
 public interface UserService {
 
-       LoginResponse login(LoginRequest request);
+    LoginResponse login(LoginRequest request);
 
-       SignUpResponse signUp(SignUpRequest request);
+    SignUpResponse signUp(SignUpRequest request);
 }
