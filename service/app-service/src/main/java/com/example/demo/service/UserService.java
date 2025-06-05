@@ -5,7 +5,9 @@ import com.example.demo.dto.LoginResponse;
 import com.example.demo.dto.SignUpRequest;
 import com.example.demo.dto.SignUpResponse;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 
+@Service
 public interface UserService {
 
        LoginResponse login(LoginRequest request);

@@ -6,5 +6,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class SignUpResponse {
+
+       private String msg;
+
 }

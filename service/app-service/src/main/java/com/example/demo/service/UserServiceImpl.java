@@ -8,9 +8,11 @@ import com.example.demo.entity.User;
 import com.example.demo.mapper.UserMapper;
 import com.example.demo.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@Service
 public class UserServiceImpl implements UserService {
 
     @Autowired
@@ -34,6 +36,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public SignUpResponse signUp(SignUpRequest request) {
-           return null;
+           User user = userMapper.toNewUser(request);
+           Optional<User> foundUser = usersRepository.findById(user.getEmailId());
+
+           if(foundUser.isPresent()){
+               return new SignUpResponse("User Already Exists");
+           } else{
+               usersRepository.save(user);
+               return new SignUpResponse("Registered New User");
+           }
     }
 }

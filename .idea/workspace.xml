@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="578e58e7-519a-4dab-ac49-768558d5f97f" name="Changes" comment="" />
+    <list default="true" id="578e58e7-519a-4dab-ac49-768558d5f97f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,11 +24,32 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;subham500071430&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/subham500071430/smart-kitchen&quot;,
+    &quot;accountId&quot;: &quot;1b862cd3-29ad-446c-962a-fd6597fb6fa5&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="C:\apache-maven-3.8.8" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2lTYgd9atuSKTovAM7rxuFQoQIa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -21,9 +57,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.DemoApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/project/smart-kitchen",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

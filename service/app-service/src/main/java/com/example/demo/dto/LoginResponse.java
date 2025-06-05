@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LoginResponse {
 
-       String email_id;
+       String emailId;
 
 }

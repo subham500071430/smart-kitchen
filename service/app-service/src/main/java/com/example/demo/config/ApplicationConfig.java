@@ -17,12 +17,6 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public UserService serviceBean() {
-        UserService userService = new UserServiceImpl();
-        return userService;
-    }
-
-    @Bean
     public UserMapper userMapper() {
            UserMapper userMapper = new UserMapper();
            return userMapper;

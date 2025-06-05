@@ -1,6 +1,7 @@
 package com.example.demo.mapper;
 
 import com.example.demo.dto.LoginRequest;
+import com.example.demo.dto.SignUpRequest;
 import com.example.demo.entity.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class UserMapper {
     public User toUser(LoginRequest dto) {
         User user = modelMapper.map(dto, User.class);
         return user;
+    }
+
+    public User toNewUser(SignUpRequest dto){
+           User user = modelMapper.map(dto, User.class);
+           return user;
     }
 
 }
