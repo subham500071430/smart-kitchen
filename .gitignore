@@ -1,2 +1,3 @@
 /ui/node_modules
 /ui/myapp/node_modules
+/service/app-service/target

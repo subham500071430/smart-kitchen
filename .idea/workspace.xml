@@ -4,18 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="578e58e7-519a-4dab-ac49-768558d5f97f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="578e58e7-519a-4dab-ac49-768558d5f97f" name="Changes" comment="signup feature">
+      <change afterPath="$PROJECT_DIR$/service/app-service/src/main/resources/work.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/src/main/java/com/example/demo/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/config/ApplicationConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/app-service/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/app-service/target/test-classes/com/example/demo/DemoApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/DemoApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/config/ApplicationConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/dto/LoginRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/dto/LoginResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/dto/SignUpRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/dto/SignUpResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/repository/UsersRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/classes/com/example/demo/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/app-service/target/test-classes/com/example/demo/DemoApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,19 @@
       <option name="presentableId" value="Default" />
       <updated>1725205648389</updated>
     </task>
+    <task id="LOCAL-00001" summary="signup feature">
+      <option name="closed" value="true" />
+      <created>1749144818169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749144818169</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="signup feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="signup feature" />
   </component>
 </project>
