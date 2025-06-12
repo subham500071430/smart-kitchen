@@ -1,7 +1,7 @@
 package com.myapp.service.entity;
 
 
-enum Role {
+public enum Role {
      ADMIN,
      USER,
      RESTAURANT_OWNER
