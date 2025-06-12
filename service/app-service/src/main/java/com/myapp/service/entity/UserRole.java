@@ -15,7 +15,10 @@ public class UserRole {
        @GeneratedValue(strategy = GenerationType.IDENTITY)
        private long id;
        @ManyToOne
-       @JoinColumn(name = "emailId")
+       @JoinColumn(name = "emailId" , referencedColumnName = "emailId")
        private User user;
+       @Enumerated(EnumType.STRING)
+       @Column(nullable = false)
+       private Role role;
 
 }
