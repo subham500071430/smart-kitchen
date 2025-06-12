@@ -1,11 +1,10 @@
-package com.example.demo.mapper;
+package com.myapp.service.mapper;
 
-import com.example.demo.dto.LoginRequest;
-import com.example.demo.dto.SignUpRequest;
-import com.example.demo.entity.User;
+import com.myapp.service.dto.LoginRequest;
+import com.myapp.service.dto.SignUpRequest;
+import com.myapp.service.entity.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 
 public class UserMapper {
 

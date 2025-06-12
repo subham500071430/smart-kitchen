@@ -1,10 +1,10 @@
-package com.example.demo.controller;
+package com.myapp.service.controller;
 
-import com.example.demo.dto.LoginRequest;
-import com.example.demo.dto.LoginResponse;
-import com.example.demo.dto.SignUpRequest;
-import com.example.demo.dto.SignUpResponse;
-import com.example.demo.service.UserService;
+import com.myapp.service.dto.LoginRequest;
+import com.myapp.service.dto.LoginResponse;
+import com.myapp.service.dto.SignUpRequest;
+import com.myapp.service.dto.SignUpResponse;
+import com.myapp.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

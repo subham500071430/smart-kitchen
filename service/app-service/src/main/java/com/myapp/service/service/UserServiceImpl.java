@@ -1,14 +1,13 @@
-package com.example.demo.service;
+package com.myapp.service.service;
 
-import com.example.demo.dto.LoginRequest;
-import com.example.demo.dto.LoginResponse;
-import com.example.demo.dto.SignUpRequest;
-import com.example.demo.dto.SignUpResponse;
-import com.example.demo.entity.User;
-import com.example.demo.mapper.UserMapper;
-import com.example.demo.repository.UsersRepository;
+import com.myapp.service.dto.LoginRequest;
+import com.myapp.service.dto.LoginResponse;
+import com.myapp.service.dto.SignUpRequest;
+import com.myapp.service.dto.SignUpResponse;
+import com.myapp.service.entity.User;
+import com.myapp.service.mapper.UserMapper;
+import com.myapp.service.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

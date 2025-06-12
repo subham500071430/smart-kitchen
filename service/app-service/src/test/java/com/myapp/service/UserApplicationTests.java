@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.myapp.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 		"springdoc.api-docs.enabled=false",
 		"springdoc.swagger-ui.enabled=false"
 })
-public class DemoApplicationTests {
+public class UserApplicationTests {
 	@Test
 	void contextLoads() {}
 }

@@ -1,8 +1,6 @@
-package com.example.demo.config;
+package com.myapp.service.config;
 
-import com.example.demo.mapper.UserMapper;
-import com.example.demo.service.UserService;
-import com.example.demo.service.UserServiceImpl;
+import com.myapp.service.mapper.UserMapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
