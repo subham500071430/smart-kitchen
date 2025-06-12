@@ -6,6 +6,7 @@ import com.myapp.service.dto.SignUpRequest;
 import com.myapp.service.dto.SignUpResponse;
 import com.myapp.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +28,14 @@ public class UserController {
     }
 
     @PostMapping(path = "/signup")
-    public SignUpResponse signup(@RequestBody SignUpRequest signUpRequest) {
-        return userService.signUp(signUpRequest);
+    public ResponseEntity<SignUpResponse> signup(@RequestBody SignUpRequest signUpRequest) {
+
+        try {
+            SignUpResponse signUpResponse = userService.signUp(signUpRequest);
+            return ResponseEntity.ok(signUpResponse);
+        } catch (Exception e){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
     }
 
     @GetMapping(path = "/hello")

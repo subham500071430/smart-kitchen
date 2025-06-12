@@ -11,5 +11,5 @@ public interface UserService {
 
        LoginResponse login(LoginRequest request);
 
-       SignUpResponse signUp(SignUpRequest request);
+       SignUpResponse signUp(SignUpRequest request) ;
 }

@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class SignUpResponse {
 
-       private String msg;
+       private String message;
 
 }
