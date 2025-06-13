@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class LoginResponse {
 
-       String emailId;
-
+       private String message;
+       private boolean success;
 }
