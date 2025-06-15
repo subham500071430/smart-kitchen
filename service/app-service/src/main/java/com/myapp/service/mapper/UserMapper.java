@@ -3,7 +3,6 @@ package com.myapp.service.mapper;
 import com.myapp.service.dto.LoginRequest;
 import com.myapp.service.dto.SignUpRequest;
 import com.myapp.service.entity.User;
-import com.myapp.service.entity.UserRole;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -22,9 +21,9 @@ public class UserMapper {
         return user;
     }
 
-    public User mapNewUser(SignUpRequest dto){
-           User user = modelMapper.map(dto, User.class);
-           return user;
+    public User mapNewUser(SignUpRequest dto) {
+        User user = modelMapper.map(dto, User.class);
+        return user;
     }
 
 }
