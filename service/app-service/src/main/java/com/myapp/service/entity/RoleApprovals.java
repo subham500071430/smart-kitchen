@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Entity
 public class RoleApprovals {
 
-    @Column
+    @Id
     private String emailId;
     @Column
     private String name;

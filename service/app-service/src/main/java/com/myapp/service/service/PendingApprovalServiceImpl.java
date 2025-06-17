@@ -5,10 +5,12 @@ import com.myapp.service.dto.PendingApprovalsResponse;
 import com.myapp.service.entity.RoleApprovals;
 import com.myapp.service.repository.PendingApprovalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class PendingApprovalServiceImpl implements PendingApprovalService {
 
     @Autowired
