@@ -14,7 +14,7 @@ public class AdminController {
        private PendingApprovalService pendingApprovalService;
 
        @PostMapping(path = "/login", produces = "application/json", consumes = "application/json")
-       ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
+       ResponseEntity<JwtLoginResponse> login(@RequestBody LoginRequest loginRequest) {
               return ResponseEntity.ok(null);
        }
 

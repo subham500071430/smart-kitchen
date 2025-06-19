@@ -1,13 +1,12 @@
 package com.myapp.service.controller;
 
-import com.myapp.service.dto.LoginRequest;
-import com.myapp.service.dto.LoginResponse;
-import com.myapp.service.dto.SignUpRequest;
-import com.myapp.service.dto.SignUpResponse;
+import com.myapp.service.dto.*;
 import com.myapp.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Objects;
 
 @RestController
 @RequestMapping("user")
@@ -22,14 +21,14 @@ public class UserController {
     }
 
     @PostMapping(path = "/login", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest) {
+    public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
 
-        LoginResponse loginResponse = userService.login(loginRequest);
+        JwtLoginResponse response = userService.login(loginRequest);
 
-        if (loginResponse.isSuccess()) {
-            return ResponseEntity.ok(loginResponse);
+        if (Objects.nonNull(response.getToken())) {
+            return ResponseEntity.ok(response);
         } else {
-            return ResponseEntity.status(401).body(loginResponse);
+            return ResponseEntity.status(401).body(new InvalidCredentialsResponse("Invalid username/password"));
         }
     }
 

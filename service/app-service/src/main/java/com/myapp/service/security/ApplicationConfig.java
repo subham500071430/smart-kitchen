@@ -1,4 +1,4 @@
-package com.myapp.service.config;
+package com.myapp.service.security;
 
 import com.myapp.service.mapper.UserMapper;
 import org.modelmapper.ModelMapper;
