@@ -1,9 +1,6 @@
 package com.myapp.service.service;
 
-import com.myapp.service.dto.LoginRequest;
-import com.myapp.service.dto.JwtLoginResponse;
-import com.myapp.service.dto.SignUpRequest;
-import com.myapp.service.dto.SignUpResponse;
+import com.myapp.service.dto.*;
 import com.myapp.service.entity.Role;
 import com.myapp.service.entity.User;
 import com.myapp.service.entity.UserRole;
@@ -15,6 +12,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -68,5 +67,24 @@ public class UserServiceImpl implements UserService {
             userRolesRepository.save(userRole);
             return new SignUpResponse("Registered New User", true);
         }
+    }
+
+    @Override
+    public UserDetails getUserById(String userId) {
+           Optional<User> user = usersRepository.findById(userId);
+           return user.map(value -> new UserDetails(value.getEmailId(), value.getName())).orElseGet(UserDetails::new);
+    }
+
+    @Override
+    public boolean updatePassword(String userId, UpdatePasswordRequest updatePasswordRequest) {
+
+           // verify old password
+           Optional<User> user = usersRepository.findById(userId);
+
+           if(user.isEmpty() || !passwordEncoder.matches(updatePasswordRequest.getOldPassword() , user.get().getPassword()))
+               return false;
+
+           int rowsUpdated = usersRepository.updatePassword(userId , passwordEncoder.encode(updatePasswordRequest.getNewPassword()));
+           return rowsUpdated > 0 ;
     }
 }

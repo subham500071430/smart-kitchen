@@ -18,14 +18,7 @@ public class SecurityConfig {
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         return http
                 .authorizeExchange(exchanges -> exchanges
-                        .pathMatchers("/user/login",
-                                "/user/signup",
-                                "/v3/api-docs/**",
-                                "/swagger-ui.html",
-                                "/swagger-ui/**",
-                                "/webjars/**",
-                                "/swagger-resources/**" ).permitAll()
-                        .anyExchange().authenticated()
+                        .anyExchange().permitAll()
                 ).csrf(ServerHttpSecurity.CsrfSpec::disable)  // disabled as we will use jwt token to authenticate
                 .build();
     }

@@ -44,8 +44,13 @@ public class UserController {
         }
     }
 
-    @GetMapping(path = "/hello")
-    public String getHello() {
-        return "Hello";
+    @GetMapping(path = "/{userId}")
+    public UserDetails getUserById(@PathVariable String userId) {
+        return userService.getUserById(userId);
+    }
+
+    @PatchMapping(path = "/{userId}/password")
+    public ResponseEntity<?> updatePassword(@PathVariable String userId, @RequestBody UpdatePasswordRequest request) {
+        return ResponseEntity.ok(userService.updatePassword(userId, request));
     }
 }
